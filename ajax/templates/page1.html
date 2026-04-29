@@ -12,7 +12,6 @@
 
     <!-- Bootstrap and CSS..... -->
  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.0/css/all.css" integrity="sha384-lZN37f5QGtY3VHgisS14W3ExzMWZxybE1SJSEsQp9S+oqd12jhcu+A56Ebc1zFSJ" crossorigin="anonymous"> 
-
  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
@@ -32,9 +31,8 @@
                 <label>Emailid</label><br>
                 <input type="email" name="email" id="email" class="form-control"><br>
                 <input type="hidden" id="itemId" name="itemId">
-
-                <button onclick="add()">Add</button>
-                <button type="button" onclick="updateItem()">Update</button>
+                <button class="btn btn-success" onclick="add()">Add</button>
+                <button class="btn btn-primary" type="button" onclick="updateItem()">Update</button>
 
             </form>
         </div>
@@ -69,7 +67,7 @@
                     $('#itemsBody').empty();
                     $.each(data, function(index, item) {
                         console.log(item)
-                        $('#itemsBody').append('<tr><td>' + item.name + '</td><td>' + item.age + '</td><td>' + item.email + '</td><td><button onclick="edit(' + item.id + ')" class="mr-2">Edit</button><button onclick="deleteItem(' + item.id + ') " class="mr-2">Delete</button></td></tr>');  
+                        $('#itemsBody').append('<tr><td>' + item.name + '</td><td>' + item.age + '</td><td>' + item.email + '</td><td><button onclick="edit(' + item.id + ')" class="btn btn-warning mr-2">Edit</button><button onclick="deleteItem(' + item.id + ') " class="btn btn-danger mr-2">Delete</button></td></tr>');  
                     }); 
                 }
             });
